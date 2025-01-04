@@ -504,9 +504,9 @@ matchNodesInject=function (tr1, tr2){
 
   iim=match(tr1$tip.label, tr2$tip.label)
   Nodes=rbind(cbind(1:length(tr1$tip.label),iim),Nodes)
-  if(any(table(Nodes[,2])>1)){
-    stop("Incorrect pseudorooting detected - use fixPseudoroot() function to correct trait tree topology")
-  }
+#  if(any(table(Nodes[,2])>1)){
+#    stop("Incorrect pseudorooting detected - use fixPseudoroot() function to correct trait tree topology")
+#  }
 
   Nodes
 }
