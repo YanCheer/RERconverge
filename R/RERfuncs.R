@@ -3250,10 +3250,11 @@ getAncestor=function(tree, nodeN){
 
 ## matchNodesInjectUpdate=function (tr1, tr2){
 matchNodesInject=function (tr1, tr2){
-  ancMatFrom=getAncestorMatrix(tr1)
+##  ancMatFrom=getAncestorMatrix(tr1)
+  ancMatFrom=getAncestors(tr1)
 
-
-  ancMatTo=getAncestorMatrix(tr2) # this is the
+##  ancMatTo=getAncestorMatrix(tr2) # this is the
+  ancMatTo=getAncestors(tr2) # this is the
 
   outMat=matrix(0,nrow=nrow(ancMatFrom), ncol=ncol(ancMatTo))
   colnames(outMat)=colnames(ancMatTo)
