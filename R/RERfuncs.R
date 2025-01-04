@@ -473,8 +473,8 @@ matchAllNodes=function(tree1, tree2){
 
 
 #' @keywords  internal
-## matchNodesInject=function (tr1, tr2){
-matchNodesInject_XXX=function (tr1, tr2){
+matchNodesInject=function (tr1, tr2){
+## matchNodesInject_XXX=function (tr1, tr2){
   if(length(tmpsp<-setdiff(tr1$tip.label, tr2$tip.label))>0){
     #stop(paste(paste(tmpsp, ","), "in tree1 do not exist in tree2"))
     stop(c("The following species in tree1 do not exist in tree2: ",paste(tmpsp, ", ")))
@@ -505,9 +505,9 @@ matchNodesInject_XXX=function (tr1, tr2){
 
   iim=match(tr1$tip.label, tr2$tip.label)
   Nodes=rbind(cbind(1:length(tr1$tip.label),iim),Nodes)
-  if(any(table(Nodes[,2])>1)){
-    stop("Incorrect pseudorooting detected - use fixPseudoroot() function to correct trait tree topology")
-  }
+##  if(any(table(Nodes[,2])>1)){
+##    stop("Incorrect pseudorooting detected - use fixPseudoroot() function to correct trait tree topology")
+##  }
 
   Nodes
 }
@@ -3248,8 +3248,8 @@ getAncestor=function(tree, nodeN){
 
 
 
-## matchNodesInjectUpdate=function (tr1, tr2){
-matchNodesInject=function (tr1, tr2){
+matchNodesInjectUpdate=function (tr1, tr2){
+## matchNodesInject=function (tr1, tr2){
 ##  ancMatFrom=getAncestorMatrix(tr1)
   ancMatFrom=getAncestors(tr1)
 
